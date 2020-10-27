@@ -12,5 +12,10 @@ module.exports = {
         new HtmlPlugin({
             template: './src/index.html'
         })
-    ]
+    ],
+    devServer: {
+        contentBase: './dist',
+        port: 3000,
+        hot: true,
+    }
 }
