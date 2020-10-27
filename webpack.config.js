@@ -17,5 +17,14 @@ module.exports = {
         contentBase: './dist',
         port: 3000,
         hot: true,
+    },
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                loader: 'babel-loader',
+                exclude: /node_modules/
+            }
+        ]
     }
 }
