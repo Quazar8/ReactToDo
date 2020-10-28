@@ -9,10 +9,11 @@ const Input = (props) => {
     
     const handleSubmit = () => {
         props.submitted(input)
+        setInput("")
     }
     return (
         <div className="input">
-            <input type="text" onChange={handleChange}/>
+            <input value={input} type="text" onChange={handleChange}/>
             <input onClick={handleSubmit} type="submit" value="Add"/>
         </div>
     )
