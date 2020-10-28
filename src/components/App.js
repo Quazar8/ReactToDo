@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
+
 import Input from './Input'
+import ToDosContainer from './ToDosContainer'
 
 const App = (props) => {
     const [todos, addTodos] = useState([])
@@ -10,13 +12,10 @@ const App = (props) => {
         addTodos(newTodos)
     }
     
-    useEffect(() => {
-        console.log(todos)
-    })
-    
     return (
         <div>
-            <h1>Welcome to React</h1>
+            <h1>To-Do's for today:</h1>
+            <ToDosContainer todos = {todos} />
             <Input submitted={submitted}/>
         </div>
     )
