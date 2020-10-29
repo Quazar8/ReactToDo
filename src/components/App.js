@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 import Input from './Input'
 import ToDosContainer from './ToDosContainer'
 
+import '../styles/app.css'
+
 const App = (props) => {
     const [todos, addTodos] = useState([])
 
@@ -13,11 +15,11 @@ const App = (props) => {
     }
     
     return (
-        <div>
+        <main className="app-container">
             <h1>To-Do's for today:</h1>
             <ToDosContainer todos = {todos} />
             <Input submitted={submitted}/>
-        </div>
+        </main>
     )
 }
 
