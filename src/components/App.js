@@ -5,20 +5,30 @@ import ToDosContainer from './ToDosContainer'
 
 import '../styles/app.css'
 
+import { deleteFromArr } from '../utils'
+
 const App = (props) => {
-    const [todos, addTodos] = useState([])
+    const [todos, setTodos] = useState([])
 
     const submitted = (text) => {
         let newTodos = [...todos]
         newTodos.push(text)
-        addTodos(newTodos)
+        setTodos(newTodos)
+    }
+
+    const deleteTodo = (index) => {
+        let newTodos = deleteFromArr(todos, index)
+        setTodos(newTodos)
     }
     
     return (
         <main className="app-container">
             <h1 id="app-title">To-Do's for today:</h1>
             <Input submitted={submitted}/>
-            <ToDosContainer todos = {todos} />
+            <ToDosContainer 
+                todos = {todos} 
+                deleteTodo = {deleteTodo}
+            />
         </main>
     )
 }

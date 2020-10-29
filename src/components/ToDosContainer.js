@@ -8,7 +8,11 @@ const ToDosContainer = (props) => {
         <section className="todos-container">
             {
                 props.todos.map((todo, i) => (
-                    <SingleToDo todo={todo} />
+                    <SingleToDo 
+                        todo={todo}
+                        todoIndex={i}
+                        deleteTodo = {props.deleteTodo} 
+                    />
                 ))
             }
         </section>
