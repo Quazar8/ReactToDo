@@ -1,6 +1,8 @@
 .single-todo {
+    width:100%;
     display: flex;
     justify-content: space-between;
+    padding: 2% 0;
 }
 
 button {
