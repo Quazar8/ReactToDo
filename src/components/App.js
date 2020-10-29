@@ -17,8 +17,8 @@ const App = (props) => {
     return (
         <main className="app-container">
             <h1 id="app-title">To-Do's for today:</h1>
-            <ToDosContainer todos = {todos} />
             <Input submitted={submitted}/>
+            <ToDosContainer todos = {todos} />
         </main>
     )
 }
