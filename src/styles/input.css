@@ -1,0 +1,12 @@
+.input-component {
+    width:100%;
+    display: flex;
+    justify-content: center;
+    padding: 2% 0 0 0;
+}
+
+#todo-input {
+    width: 70%;
+    border-radius: 10%;
+    font-size: 1.3rem;
+}
