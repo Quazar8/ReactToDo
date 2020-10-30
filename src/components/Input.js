@@ -13,9 +13,18 @@ const Input = (props) => {
         props.submitted(input)
         setInput("")
     }
+
+    const handleKeyUp = (e) => {
+        if(e.keyCode === 13)
+            handleSubmit()
+    }
     return (
         <div className="input-component">
-            <input id="todo-input" value={input} type="text" onChange={handleChange}/>
+            <input id="todo-input" 
+                    value={input} type="text" 
+                    onChange={handleChange}
+                    onKeyUp= {handleKeyUp}
+            />
             <input id="submit-button" onClick={handleSubmit} type="submit" value="Add"/>
         </div>
     )
