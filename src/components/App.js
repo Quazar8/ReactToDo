@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 import Input from './Input'
 import ToDosContainer from './ToDosContainer'
+import DeleteAllButton from './DeleteAllButton'
 
 import '../styles/app.css'
 
@@ -29,6 +30,10 @@ const App = (props) => {
                 todos = {todos} 
                 deleteTodo = {deleteTodo}
             />
+            {
+                todos.length > 0 ? <DeleteAllButton />
+                                 : null
+            }
         </main>
     )
 }
