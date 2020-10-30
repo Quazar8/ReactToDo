@@ -5,6 +5,15 @@
     padding: 2% 0;
 }
 
-button {
+.single-todo button {
     padding: 1% 2%;
+    width: 7%;
+    background-color: #cc1111;
+    color: white;
+    font-weight: bold;
+}
+
+.single-todo button:hover {
+    background-color: white;
+    color: #cc1111;
 }

@@ -16,7 +16,7 @@ const Input = (props) => {
     return (
         <div className="input-component">
             <input id="todo-input" value={input} type="text" onChange={handleChange}/>
-            <input onClick={handleSubmit} type="submit" value="Add"/>
+            <input id="submit-button" onClick={handleSubmit} type="submit" value="Add"/>
         </div>
     )
 }

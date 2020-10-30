@@ -23,7 +23,7 @@ const App = (props) => {
     
     return (
         <main className="app-container">
-            <h1 id="app-title">To-Do's for today:</h1>
+            <h1 id="app-title">ToDo's for today:</h1>
             <Input submitted={submitted}/>
             <ToDosContainer 
                 todos = {todos} 

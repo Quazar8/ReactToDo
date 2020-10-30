@@ -1,4 +1,4 @@
-let deleteFromArr = (arr,index) => {
+let deleteFromArr = (arr, index) => {
     let result = new Array(arr.length - 1)
 
     for(let i = 0; i < index; i++){
