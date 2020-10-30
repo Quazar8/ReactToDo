@@ -21,6 +21,10 @@ const App = (props) => {
         let newTodos = deleteFromArr(todos, index)
         setTodos(newTodos)
     }
+
+    const deleteAll = () => {
+        setTodos([])
+    }
     
     return (
         <main className="app-container">
@@ -31,8 +35,11 @@ const App = (props) => {
                 deleteTodo = {deleteTodo}
             />
             {
-                todos.length > 0 ? <DeleteAllButton />
-                                 : null
+                todos.length > 0 
+                    ? <DeleteAllButton  
+                        deleteAll={deleteAll}
+                       />
+                    : null
             }
         </main>
     )
