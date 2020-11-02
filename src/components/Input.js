@@ -3,7 +3,8 @@ import React, { useState } from 'react'
 import '../styles/input.css'
 
 const Input = (props) => {
-    const [input, setInput] = useState("")
+    const defaultState
+    const [input, setInput] = useState(defaultState)
 
     const handleChange = (e) => {
         setInput(e.target.value)
@@ -11,11 +12,11 @@ const Input = (props) => {
     
     const handleSubmit = () => {
         props.submitted(input)
-        setInput("")
+        setInput(defaultState)
     }
 
     const handleKeyUp = (e) => {
-        if(e.keyCode === 13)
+        if(e.key === 'Enter')
             handleSubmit()
     }
     return (
