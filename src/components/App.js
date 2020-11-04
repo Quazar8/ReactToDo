@@ -5,6 +5,7 @@ import ToDosContainer from './ToDosContainer'
 import DeleteAllButton from './DeleteAllButton'
 
 import '../styles/app.css'
+import '../styles/animations.css'
 
 import { deleteFromArr } from '../utils'
 

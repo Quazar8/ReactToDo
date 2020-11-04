@@ -1,0 +1,14 @@
+.moveDown {
+    animation:goDown 0.50s linear;
+}
+
+@keyframes goDown {
+    from {
+        transform: translateY(calc(-1*var(--articleH)));
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

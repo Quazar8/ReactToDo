@@ -2,6 +2,7 @@
     --bcolor: #252121;
     --ctext: #fffffff1; 
     --mainFont: Arial, Helvetica, sans-serif;
+    --articleH: 6vh;
 }
 
 * {

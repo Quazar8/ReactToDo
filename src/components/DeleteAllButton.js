@@ -1,9 +1,11 @@
 import React from 'react'
 
-const DeleteAllButton = (props) => {
+import '../styles/deleteAll.css'
+
+const DeleteAllButton = ({ deleteAll }) => {
     return (
-        <section className="delete-button-container">
-            <button onClick={props.deleteAll}
+        <section className="delete-all-container moveDown">
+            <button onClick={deleteAll}
                 >Delete All
             </button>
         </section>
