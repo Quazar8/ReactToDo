@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import '../styles/input.css'
 
 const Input = (props) => {
-    const defaultState
+    const defaultState = ''
     const [input, setInput] = useState(defaultState)
 
     const handleChange = (e) => {
