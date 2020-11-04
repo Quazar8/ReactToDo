@@ -23,6 +23,7 @@ const App = (props) => {
     const deleteTodo = (index) => {
         let newTodos = deleteFromArr(todos, index)
         setTodos(newTodos)
+        setMoveDown(false)
     }
 
     const deleteAll = () => {

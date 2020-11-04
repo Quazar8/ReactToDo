@@ -1,9 +1,22 @@
+.moveUp {
+    animation: goUp 0.35s linear
+}
+
 .moveDown {
     animation:goDown 0.35s linear;
 }
 
 .moveDownOpacity {
     animation:goDownOpacity 0.35s linear;
+}
+
+@keyframes goUp {
+    from {
+        transform: translateY(var(--articleH));
+    }
+    to {
+        transform: translateY(0);
+    }
 }
 
 @keyframes goDown {
