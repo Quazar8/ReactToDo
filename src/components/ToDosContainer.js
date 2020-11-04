@@ -9,9 +9,10 @@ const ToDosContainer = (props) => {
             {
                 props.todos.map((todo, i) => (
                     <SingleToDo 
-                        todo={todo}
-                        todoIndex={i}
-                        deleteTodo = {props.deleteTodo} 
+                        todo={ todo }
+                        todoIndex={ i }
+                        deleteTodo = { props.deleteTodo }
+                        addDoneTodo = { props.addDoneTodo } 
                     />
                 ))
             }
