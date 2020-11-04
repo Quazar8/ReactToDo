@@ -8,12 +8,26 @@
     padding: 2% 0;
 }
 
-.single-todo button{
-    padding: 1% 2%;
-    width: 7%;
-    background-color: #cc1111;
-    color: white;
+.buttons-container {
+    display: flex;
+    justify-content: end;
+    width: 25%;
+}
+
+.buttons-container button {
+    width: 30%;
+    padding: 3% 3%;
+    margin: 0 0 0 10%;
     font-weight: bold;
+    color: white;
+}
+
+.delete-button {
+    background-color: #cc1111;
+}
+
+.done-button {
+    background-color: rgb(25, 226, 25);
 }
 
 .single-todo button:hover {

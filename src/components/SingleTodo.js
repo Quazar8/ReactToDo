@@ -10,7 +10,13 @@ const SingleToDo = (props) => {
     return (
         <article className="single-todo moveDownOpacity">
             <h2>{props.todo}</h2>
-            <button onClick={handleDeleteClick}>X</button>
+            <div className="buttons-container">
+                <button className="done-button">&#10004;</button>
+                <button className="delete-button" 
+                 onClick={handleDeleteClick}>
+                            X
+                </button>
+            </div>
         </article>
     )
 }
