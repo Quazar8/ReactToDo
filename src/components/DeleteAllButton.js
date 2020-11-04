@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import '../styles/deleteAll.css'
 
-const DeleteAllButton = ({ deleteAll }) => {
+const DeleteAllButton = ({ deleteAll, moveDown }) => {
+    let moveClass = ""
+    if(moveDown) moveClass = " moveDown"
+    
     return (
-        <section className="delete-all-container moveDown">
+        <section className={"delete-all-container" + moveClass}>
             <button onClick={deleteAll}
                 >Delete All
             </button>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState, useCallback } from 'react'
 
 import Input from './Input'
 import ToDosContainer from './ToDosContainer'
@@ -11,11 +11,13 @@ import { deleteFromArr } from '../utils'
 
 const App = (props) => {
     const [todos, setTodos] = useState([])
-
+    const [moveDown, setMoveDown] = useState(false)
+        
     const submitted = (text) => {
         let newTodos = [...todos]
         newTodos.push(text)
         setTodos(newTodos)
+        setMoveDown(true)
     }
 
     const deleteTodo = (index) => {
@@ -26,7 +28,7 @@ const App = (props) => {
     const deleteAll = () => {
         setTodos([])
     }
-    
+
     return (
         <main className="app-container">
             <h1 id="app-title">ToDo's for today:</h1>
@@ -39,6 +41,8 @@ const App = (props) => {
                 todos.length > 0 
                     ? <DeleteAllButton  
                         deleteAll={deleteAll}
+                        moveDown = {moveDown}
+                        key = {todos.length}
                        />
                     : null
             }

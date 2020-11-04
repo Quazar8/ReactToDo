@@ -1,8 +1,21 @@
 .moveDown {
-    animation:goDown 0.50s linear;
+    animation:goDown 0.35s linear;
+}
+
+.moveDownOpacity {
+    animation:goDownOpacity 0.35s linear;
 }
 
 @keyframes goDown {
+    from {
+        transform: translateY(calc(-1*var(--articleH)));
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes goDownOpacity {
     from {
         transform: translateY(calc(-1*var(--articleH)));
         opacity: 0;

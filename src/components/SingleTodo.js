@@ -8,7 +8,7 @@ const SingleToDo = (props) => {
     }
 
     return (
-        <article className="single-todo moveDown">
+        <article className="single-todo moveDownOpacity">
             <h2>{props.todo}</h2>
             <button onClick={handleDeleteClick}>X</button>
         </article>
