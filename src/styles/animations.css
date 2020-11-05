@@ -1,3 +1,11 @@
+.moveLeft {
+    animation: goLeft 0.70s linear;
+}
+
+.moveRight {
+    animation: goRight 1.40s linear;
+}
+
 .moveUp {
     animation: goUp 0.35s linear
 }
@@ -19,6 +27,21 @@
     }
 }
 
+@keyframes goRight {
+    0% { 
+        transform: translateX(calc(-1*32.5%));
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(calc(-1*32.5%));
+        opacity: 0
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 @keyframes goDown {
     from {
         transform: translateY(calc(-1*var(--articleH)));
@@ -37,4 +60,9 @@
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+@keyframes goLeft {
+    from { transform: translateX(30%);}
+    to {transform: translateX(0);}
 }

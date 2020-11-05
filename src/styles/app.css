@@ -7,7 +7,7 @@
 }
 
 .main-container, .finished-todos-container {
-    width: 35%;
+    width: 30%;
     height:70%;
     border: 0.2vw solid white;
     border-radius: 4%;
@@ -20,16 +20,28 @@
     scrollbar-width: none;
 }
 
+.main-container {
+    background-color: #523838;
+    position: relative;
+    margin-right: 2.5%;
+    z-index: 2;
+}
+
 .main-container::-webkit-scrollbar {
     display: none;
 }
 
+.finished-todos-container {
+    position: relative;
+    z-index: 1;
+}
+
 .finished-todos-container::-webkit-scrollbar {
-    display: none;
+    opacity: none;
 }
 
 .finished-todos-display {
-    width:90%;
+    width: 90%;
 }
 
 #app-title {

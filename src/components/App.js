@@ -46,6 +46,7 @@ const App = () => {
                 deleteTodo = { deleteTodo }
                 deleteAll = { deleteAll }
                 moveDown = { moveDown }
+                moveLeft = { doneTodos.length > 0 }
             />
             <FinishedTodos 
                 doneTodos = { doneTodos }

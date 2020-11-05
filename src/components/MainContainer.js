@@ -4,9 +4,12 @@ import Input from './Input'
 import ToDosContainer from './ToDosContainer'
 
 const MainContainer = ({submitted, todos,
-deleteAll, deleteTodo, addDoneTodo, moveDown}) => {
+        deleteAll, deleteTodo, addDoneTodo, 
+        moveDown, moveLeft}) => {
+    let classAppend = ""
+    if(moveLeft) classAppend = " moveLeft"
     return (
-        <section className="main-container">
+        <section className={"main-container" + classAppend}>
             <h1 id="app-title">ToDo's for today:</h1>
             <Input submitted={submitted}/>
             <ToDosContainer 
