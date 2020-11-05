@@ -1,7 +1,7 @@
-import React, { useEffect, useState, useCallback } from 'react'
+import React, { useState } from 'react'
 
 import MainContainer from './MainContainer'
-import FinishedYodos from './FinishedTodos'
+import FinishedTodos from './FinishedTodos'
 
 import '../styles/app.css'
 import '../styles/animations.css'
@@ -47,7 +47,7 @@ const App = () => {
                 deleteAll = { deleteAll }
                 moveDown = { moveDown }
             />
-            <FinishedYodos 
+            <FinishedTodos 
                 doneTodos = { doneTodos }
             />
          </main>

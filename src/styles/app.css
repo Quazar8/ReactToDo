@@ -24,6 +24,14 @@
     display: none;
 }
 
+.finished-todos-container::-webkit-scrollbar {
+    display: none;
+}
+
+.finished-todos-display {
+    width:90%;
+}
+
 #app-title {
     text-align: center;
     font-style: italic;
