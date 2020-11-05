@@ -1,8 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react'
 
-import Input from './Input'
-import ToDosContainer from './ToDosContainer'
-import DeleteAllButton from './DeleteAllButton'
+import MainContainer from './MainContainer'
 import FinishedYodos from './FinishedTodos'
 
 import '../styles/app.css'
@@ -40,29 +38,19 @@ const App = () => {
     }
 
     return (
-        <div className="app-container">
-            <main className="main-container">
-                <h1 id="app-title">ToDo's for today:</h1>
-                <Input submitted={submitted}/>
-                <ToDosContainer 
-                    todos = { todos } 
-                    deleteTodo = { deleteTodo }
-                    addDoneTodo = { addDoneTodo }
-                />
-                {
-                    todos.length > 0 
-                        ? <DeleteAllButton  
-                                deleteAll={ deleteAll }
-                                moveDown = { moveDown }
-                                key = { todos.length }
-                            />
-                        : null
-                }
-            </main>
+        <main className="app-container">
+            <MainContainer 
+                todos = { todos }
+                submitted = { submitted }
+                addDoneTodo = { addDoneTodo }
+                deleteTodo = { deleteTodo }
+                deleteAll = { deleteAll }
+                moveDown = { moveDown }
+            />
             <FinishedYodos 
                 doneTodos = { doneTodos }
             />
-         </div>
+         </main>
     )
 }
 
