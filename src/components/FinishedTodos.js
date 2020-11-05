@@ -1,6 +1,7 @@
 import React from 'react'
 
 const FinishedTodos = ({ doneTodos }) => {
+    if(doneTodos.length === 0) return null
     return (
         <section className="finished-todos-container">
             <h1>Done Todos:</h1>

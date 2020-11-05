@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 
-import '../styles/deleteAll.css'
+import '../styles/delete-all.css'
 
 const DeleteAllButton = ({ deleteAll, moveDown }) => {
     let moveClass = " moveUp"
